@@ -22,7 +22,7 @@
 	<dubbo:protocol name="dubbo" port="20885" />
 
 	<!-- 声明需要暴露的服务接口 timeout超时时间，单位为毫秒--><!-- timeout="100000"-->
-	<dubbo:service interface="com.keymao.cart.service.impl.CartServiceImpl" ref="cartServiceImpl" timeout="100000" retries="5"/>
+	<dubbo:service interface="com.keymaoshop.cart.service.CartService" ref="cartServiceImpl" timeout="100000" retries="5"/>
 
 
 </beans>
