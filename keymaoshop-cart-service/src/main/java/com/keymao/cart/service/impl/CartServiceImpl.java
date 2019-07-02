@@ -32,7 +32,7 @@ public class CartServiceImpl implements CartService {
 	@Override
 	public E3Result addCart(long userId, long itemId, int num) {
 		//向redis中添加购物车。
-		//数据类型是hash key：用户id field：商品id value：商品信息
+		//数据类型是hash key：用户id ；field：商品id value：商品信息
 		//判断商品是否存在
 		Boolean hexists = jedisClient.hexists(REDIS_CART_PRE + ":" + userId, itemId + "");
 		//如果存在数量相加
